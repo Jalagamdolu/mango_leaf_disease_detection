@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url("static/img.jpg") no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0px 0px 12px gray;
+        }
+        img {
+            width: 300px;
+            margin-top: 10px;
+            border-radius: 12px;
+        }
+        h3 {
+            color: #007BFF;
+            font-size: 22px;
+        }
+        a {
+            font-weight: bold;
+            color: #ff5733;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌿 Prediction Result</h1>
+    <div class="container">
+        <h2>Uploaded Image:</h2>
+        <img src="{{ image_path }}" alt="Uploaded Leaf">
+        <h3>Predicted Disease: <strong>{{ prediction }}</strong></h3>
+        <p>Click below to get detailed care advice and treatment options.</p>
+        <a href="/suggestion?prediction={{ prediction }}">💡 View Suggestion</a><br>
+        <a href="/">🔙 Go Back</a>
+    </div>
+</body>
+</html>
